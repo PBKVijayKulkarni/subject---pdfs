@@ -1,0 +1,7 @@
+http://localhost:8080/actuator
+Useful endpoints:
+/actuator/health
+/actuator/info
+/actuator/beans
+/actuator/mappings
+/actuator/metrics
