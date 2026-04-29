@@ -1,0 +1,71 @@
+
+In Amazon Web Services:
+
+AMI: Windows Server 2019/2022
+Instance type: t2.micro (free tier)
+Key pair: create/download .pem
+2) Get Administrator password & connect (RDP)
+
+Use Remote Desktop Connection (RDP):
+
+EC2 → Instances → Connect
+Choose RDP client
+Click Get Password
+Upload your .pem
+Decrypt → get Administrator password
+
+Open RDP (mstsc) and connect:
+
+IP: <your-ec2-public-ip>
+User: Administrator
+Password: (decrypted one)
+ 3) Install Java (JDK 17)
+
+Inside the Windows instance:
+
+Download Amazon Corretto 17 (MSI) or any JDK 17
+Install it
+Verify in Command Prompt:
+java -version
+ 4) Copy your JAR to the instance
+
+
+Copy from your laptop
+Paste into instance via RDP (or use drag & drop)
+
+Place it somewhere like:
+
+C:\app\
+  Run the Spring Boot app
+
+Open Command Prompt:
+
+cd C:\app
+java -jar Cloud_Deployment_Demo1-0.0.1-SNAPSHOT.jar
+
+Tomcat started on port 5555
+ 6) Open port in Windows Firewall
+
+On the instance:
+
+Open Windows Defender Firewall
+Go to Advanced Settings
+Inbound Rules → New Rule
+Choose:
+Port → TCP → Specific: 5555
+Allow the connection
+Apply to all profiles
+Name: SpringBoot-5555
+Open port in AWS Security Group
+
+In Amazon Web Services:
+
+EC2 → Instance → Security Group → Edit Inbound Rules
+
+Add:
+
+Type	Port	Source
+Custom TCP	5555	0.0.0.0/0
+
+ Access from browser
+http://<your-ec2-public-ip>:5555
