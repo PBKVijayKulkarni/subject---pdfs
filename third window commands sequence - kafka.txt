@@ -1,0 +1,11 @@
+COMMAND PROMPT WINDOW - 3
+
+Create a Consumer and start consuming the messages. 
+Open another Command Prompt window and repeat the steps
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-console-consumer.bat --topic topic-scan-it-1 --from-beginning --bootstrap-server localhost:9092
+2026-04-23T10:34:42.970620900Z main ERROR Reconfiguration failed: No configuration found for '266474c2' at 'null' in 'null'
+hi
+welcome to kafka @scan-it
+the second window is open now
+how are things ?

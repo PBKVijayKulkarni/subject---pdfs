@@ -1,0 +1,26 @@
+
+COMMAND PROMPT WINDOW - 2
+-> Create a toppic and start the Producer then send messages !
+
+C:\>cd kafka_2.13-4.0.2
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-topics.bat --create --topic topic-scan-it-1 --bootstrap-server localhost:9092
+2026-04-23T10:23:59.987097700Z main ERROR Reconfiguration failed: No configuration found for '266474c2' at 'null' in 'null'
+Created topic topic-scan-it-1.
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-console-producer.bat --topic topic-scan-it-1 --bootstrap-server localhost:9092
+2026-04-23T10:25:30.670432200Z main ERROR Reconfiguration failed: No configuration found for '266474c2' at 'null' in 'null'
+>hi
+>welcome to kafka @scan-it
+>the second window is open now
+>how are things ?
+>
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+2026-04-23T16:28:33.708078600Z main ERROR Reconfiguration failed: No configuration found for '266474c2' at 'null' in 'null'
+__consumer_offsets
+product-topic
+scan-it-1
+test-scan-it-1
+test-topic
+topic-scan-it-1

@@ -1,0 +1,77 @@
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-storage.bat random-uuid
+
+C:\kafka_2.13-4.0.2>java -version
+java version "17.0.4" 2022-07-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.4+11-LTS-179)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.4+11-LTS-179, mixed mode, sharing)
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-storage.bat random-uuid --verbose
+
+C:\kafka_2.13-4.0.2>echo %ERRORLEVEL%
+0
+
+C:\kafka_2.13-4.0.2>.\bin\windows\kafka-run-class.bat org.apache.kafka.storage.StorageTool random-uuid
+Error: Could not find or load main class org.apache.kafka.storage.StorageTool
+Caused by: java.lang.ClassNotFoundException: org.apache.kafka.storage.StorageTool
+
+C:\kafka_2.13-4.0.2>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2E21-C04C
+
+ Directory of C:\kafka_2.13-4.0.2
+
+04/12/2026  11:50 PM    <DIR>          .
+04/12/2026  11:50 PM    <DIR>          ..
+03/03/2026  02:04 PM    <DIR>          bin
+03/03/2026  02:04 PM    <DIR>          config
+04/12/2026  11:30 PM       137,629,696 kafka_2.13-4.0.2.tar
+03/03/2026  02:04 PM    <DIR>          libs
+03/03/2026  02:03 PM            14,669 LICENSE
+03/03/2026  02:04 PM    <DIR>          licenses
+04/22/2026  11:27 PM    <DIR>          logs
+03/03/2026  02:03 PM            27,063 NOTICE
+03/03/2026  02:04 PM    <DIR>          site-docs
+               3 File(s)    137,671,428 bytes
+               8 Dir(s)  44,540,428,288 bytes free
+
+C:\kafka_2.13-4.0.2>cd libs
+
+C:\kafka_2.13-4.0.2\libs>dir kafka
+ Volume in drive C has no label.
+ Volume Serial Number is 2E21-C04C
+
+ Directory of C:\kafka_2.13-4.0.2\libs
+
+File Not Found
+
+C:\kafka_2.13-4.0.2\libs>dir kafka*.jar
+ Volume in drive C has no label.
+ Volume Serial Number is 2E21-C04C
+
+ Directory of C:\kafka_2.13-4.0.2\libs
+
+03/03/2026  02:03 PM         9,194,026 kafka-clients-4.0.2.jar
+03/03/2026  02:03 PM            99,487 kafka-coordinator-common-4.0.2.jar
+03/03/2026  02:04 PM           614,189 kafka-group-coordinator-4.0.2.jar
+03/03/2026  02:03 PM            11,990 kafka-group-coordinator-api-4.0.2.jar
+03/03/2026  02:03 PM           822,367 kafka-metadata-4.0.2.jar
+03/03/2026  02:03 PM           295,714 kafka-raft-4.0.2.jar
+03/03/2026  02:04 PM           153,250 kafka-server-4.0.2.jar
+03/03/2026  02:03 PM           356,948 kafka-server-common-4.0.2.jar
+03/03/2026  02:03 PM            92,072 kafka-share-coordinator-4.0.2.jar
+03/03/2026  02:04 PM            70,879 kafka-shell-4.0.2.jar
+03/03/2026  02:03 PM           426,737 kafka-storage-4.0.2.jar
+03/03/2026  02:03 PM            27,198 kafka-storage-api-4.0.2.jar
+03/03/2026  02:04 PM         2,026,338 kafka-streams-4.0.2.jar
+03/03/2026  02:04 PM            26,944 kafka-streams-examples-4.0.2.jar
+03/03/2026  02:04 PM           153,303 kafka-streams-scala_2.13-4.0.2.jar
+03/03/2026  02:04 PM            52,676 kafka-streams-test-utils-4.0.2.jar
+03/03/2026  02:04 PM           545,407 kafka-tools-4.0.2.jar
+03/03/2026  02:03 PM             9,157 kafka-tools-api-4.0.2.jar
+03/03/2026  02:03 PM            42,054 kafka-transaction-coordinator-4.0.2.jar
+03/03/2026  02:04 PM         2,855,982 kafka_2.13-4.0.2.jar
+              20 File(s)     17,876,718 bytes
+               0 Dir(s)  44,539,441,152 bytes free
+
+C:\kafka_2.13-4.0.2\libs>
